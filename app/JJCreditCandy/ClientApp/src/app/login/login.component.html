@@ -1,0 +1,36 @@
+<div [ngClass]="'mobilelogin'" >
+   <!-- <div layout="row" layout-lg="column"> -->
+
+        <mat-card  class= "mat-elevation-z12" >
+            <mat-card-header class="mat-elevation-z2" style="background-color:rgb(82, 80, 80);">
+                <div mat-card-avatar> <img [src]="ImagePath" style="width:50px;height:50px;padding-top:10px;padding-left:7px;"></div>
+                <!-- <div mat-card-avatar><mat-icon style="font-size: 50px;" >person</mat-icon></div> -->
+                <mat-card-title style="padding-left:10px;padding-top:10px;">Login</mat-card-title>
+                <mat-card-subtitle style="padding-left:10px;">Please enter your credentials</mat-card-subtitle>
+            </mat-card-header>
+            <br/>
+            <!-- <form> -->
+                <mat-card-content>
+                    <mat-form-field mat-form-field style="width: 90%">
+                        <input matInput autocomplete="off"  placeholder="Username" [(ngModel)]="uname" required>
+                    </mat-form-field>
+                </mat-card-content>
+                <mat-card-content>
+                    <mat-form-field style="width: 90%">
+                        <input type="password"  autocomplete="off" matInput placeholder="Password" [(ngModel)]="pass" required >
+                    </mat-form-field>
+                </mat-card-content>
+                <button mat-stroked-button color="primary" (click)="valid()" class="btn-block">
+                    <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">login</i>
+                    Login</button>&nbsp;&nbsp;
+                <button mat-stroked-button color="basic" style="color:aqua;" (click)="register()" class="btn-block">
+                    <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">bookmark_border</i>
+                  Register
+                </button>
+            <!-- </form> -->
+
+        </mat-card>
+
+
+    </div>
+

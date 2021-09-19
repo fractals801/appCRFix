@@ -1,0 +1,266 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+/*a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+*/
+
+
+/*html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/
+
+
+/*@import '@angular/material/prebuilt-themes/deeppurple-amber.css';*/
+
+/* .custom_card { width: 95%; margin-left: 30px; margin-top: 10px;  } */
+
+
+
+ @import "ag-grid-community/dist/styles/ag-grid.css";
+ @import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+ @import "ag-grid-community/dist/styles/ag-theme-alpine-dark.css"; 
+
+ /* 
+body{
+  background-color: #313131;
+} */
+
+.linkfont{
+    font-size: 12px;
+  }
+
+.mat-row .mat-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-row:hover .mat-cell {
+  border-color: currentColor;
+  background-color: rgb(155, 202, 241);
+}
+
+
+.richfix .mat-button{
+  color:white;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flex-container > .divbox{
+  width: 40%;
+  margin: 10px;
+  align-content: center;
+ /* // background-color: rgb(224, 220, 220); */
+ }
+
+
+
+ div > .mat-card{
+  /* background-color: rgb(224, 220, 220); */
+  color:rgb(0, 0, 0);
+}
+
+
+
+.flex-verticalcol{
+  display: flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+}
+
+.flex-verticalcol  .verticalprops{
+  width:50px;
+  overflow:hidden;
+  transform: rotate(180deg);
+  writing-mode:vertical-lr;
+  background-color: rgb(205, 205, 207);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 5px;
+  
+}
+
+.menubar-spacer {
+  flex: 1 1 auto;
+}
+
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #fff !important;
+}
+
+.glow {
+ color: #fff;
+   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+}
+
+.neoncarterpillar:hover {
+  color: rgb(255, 255, 255);
+  text-shadow:
+    0 0 5px rgb(241, 185, 64),
+    0 0 10px rgb(241, 185, 64),
+    0 0 100px rgb(241, 185, 64)
+}
+
+.neonblue:hover {
+  color: rgb(255, 255, 255);
+  text-shadow:
+    0 0 5px rgb(153, 236, 241),
+    0 0 10px rgb(153, 236, 241),
+    0 0 20px rgb(153, 236, 241),
+    0 0 40px rgb(153, 236, 241),
+    0 0 80px rgb(153, 236, 241),
+    0 0 90px rgb(153, 236, 241),
+    0 0 100px rgb(153, 236, 241),
+    0 0 150px rgb(153, 236, 241)
+}
+
+.neonblue_lbl {
+  color: rgb(255, 255, 255);
+  border-radius: 200px;
+  text-shadow:
+  0 0 5px rgb(153, 236, 241),
+  0 0 10px rgb(153, 236, 241),
+  0 0 20px rgb(153, 236, 241),
+  0 0 40px rgb(153, 236, 241),
+  0 0 80px rgb(153, 236, 241),
+  0 0 90px rgb(153, 236, 241),
+  0 0 100px rgb(153, 236, 241),
+  0 0 150px rgb(153, 236, 241);  
+ 
+}
+
+
+
+.neonred:hover {
+  color: rgb(255, 255, 255);
+  text-shadow:
+    0 0 5px rgb(248, 78, 78),
+    0 0 10px rgb(248, 78, 78),
+    0 0 20px rgb(248, 78, 78),
+    0 0 40px rgb(248, 78, 78),
+    0 0 80px rgb(248, 78, 78),
+    0 0 90px rgb(248, 78, 78),
+    0 0 100px rgb(248, 78, 78),
+    0 0 150px rgb(248, 78, 78)
+}
+
+
+
+.neongreen:hover {
+  color: rgb(255, 255, 255);
+  text-shadow:
+    0 0 5px rgb(10, 131, 30),
+    0 0 10px rgb(10, 131, 30),
+    0 0 20px rgb(10, 131, 30),
+    0 0 40px rgb(10, 131, 30),
+    0 0 80px rgb(10, 131, 30),
+    0 0 90px rgb(10, 131, 30),
+    0 0 100px rgb(10, 131, 30),
+    0 0 150px rgb(10, 131, 30)
+}
+
+
+.set1{
+  width : 70%;
+  padding: 5px;
+}
+
+.set2{
+  width : 45%;
+  padding: 5px;
+}
+
+.set3{
+  width : 23%;
+  padding: 5px;
+}
+
+.dialogset{
+
+  width : 40%;
+}
+
+.richfix .mat-icon-button{
+  width:auto;
+}
+
+
+@media only screen and  (min-width:735px) {
+  .mobilelogin{
+    width:50%;margin: auto;padding:10%;
+  }
+}
+ 
+
+@media only screen and  (max-width:550px) {
+    .set1{
+     width : 96%;
+     padding: 5px;
+   }
+   .set2{
+    width : 96%;
+    padding: 5px;
+  }
+  .set3{
+    width : 96%;
+    padding: 5px;
+  }
+  .dialogset{
+
+    width : 96%;
+  }
+
+  
+
+
+
+  }
+
+  
+
+  
+@media only screen and  (max-width:700px) {
+  
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .flex-container > .divbox{
+    width: 96%;
+    margin: 10px;
+    align-content: center;
+    background-color: rgb(10, 10, 10);
+   }
+
+
+}

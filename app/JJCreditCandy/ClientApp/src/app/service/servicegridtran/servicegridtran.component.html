@@ -1,0 +1,7 @@
+<app-crudmenu *ngIf="!inputModel.xsection.s2.grid.disable" #appcrudmenuservicetran [(inputModel)]="inputModel.fullObj.xcrudMethodsServicetran"> </app-crudmenu>
+<ag-grid-angular #xServicetrangrid [stopEditingWhenGridLosesFocus]="false" style="width:100%; height: 60vh;" class="ag-theme-alpine-dark"
+    [rowData]="gridStuffsServicetran.rowData" [columnDefs]="gridStuffsServicetran.columnDefs" [defaultColDef]="gridStuffsServicetran.defaultColDef"
+    rowHeight="150"
+    [frameworkComponents]="frameworkComponents" [suppressDragLeaveHidesColumns]="true" (rowDoubleClicked)="gridStuffsServicetran.rowDoubleClicked($event)"
+    (gridReady)="onGridStuffsServicetranReady($event)" (cellValueChanged)="onCellValueChanged($event)">
+</ag-grid-angular>

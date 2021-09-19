@@ -1,0 +1,45 @@
+<app-sidenav #xsnav [(inputModel)]="that">
+
+  <form [formGroup]="grupo1_companyprofile" #frm="ngForm" #frmobj autocomplete="off" >
+    <input autocomplete="false" name="hidden" type="text" style="display:none;">
+    <mat-tab-group dynamicHeight>
+
+      <mat-tab label="Companies Information" *ngIf="fullObj.defaultObj.showtab2==false">
+        <!-- <app-crudmenu [(inputModel)]="fullObj.defaultObj.xcrudMethods"> </app-crudmenu> -->
+
+        <!-- <div class="example-container mat-elevation-z4 example-large-box"> -->
+        <p>
+          <span>
+            <mat-form-field appearance="fill" style="width:50%;">
+              <mat-label>Search criteria</mat-label>
+              <input matInput maxlength="100" placeholder="Placeholder" formControlName="searchfiltercriteria">
+            </mat-form-field>
+          </span>
+          &nbsp;&nbsp;
+          <span class="richfix">
+            <!-- <button mat-raised-button color="primary">Remove</button>  -->
+            <button mat-icon-button class="neoncarterpillar" (click)="filterSearch()">
+              <mat-icon>search</mat-icon>
+              &nbsp;<span>Search</span>
+            </button>
+          </span>
+        </p>
+        <div class="example-container mat-elevation-z4 ">
+          <p>
+            <app-ciagrid #xCiagrid [(inputModel)]="that">
+            </app-ciagrid>
+          </p>
+        </div>
+
+      </mat-tab>
+      <mat-tab label="Edit Company Information" *ngIf="fullObj.defaultObj.showtab2">
+        <app-crudmenu #appcrudmenu1 [(inputModel)]="this.fullObj.xcrudMethods2"></app-crudmenu>
+
+        <div class="example-container mat-elevation-z4 example-large-box" [ngStyle]="xsection_companyprofile.s1.root">
+          <app-ciaprof [(inputModel)]="that"></app-ciaprof>
+        </div>
+      </mat-tab>
+      <!--<mat-tab label="Third">Content 3</mat-tab>-->
+    </mat-tab-group>
+  </form>
+</app-sidenav>

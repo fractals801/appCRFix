@@ -1,0 +1,66 @@
+<div [formGroup]="inputModel.grupo1_customerprofile" [ngStyle]="inputModel.xsection_customerprofile.s1.root">
+
+    <mat-form-field appearance="fill" class="set2" [ngStyle]="inputModel.xsection_customerprofile.s1.ch.customername">
+      <mat-label>Name</mat-label>
+      <input matInput maxlength="20"  id="customername" placeholder="Placeholder" formControlName='customername'>
+      <!--<mat-icon matSuffix>sentiment_very_satisfied</mat-icon>-->
+      <mat-hint>Customer Name</mat-hint>
+      <mat-error *ngIf='inputModel.grupo1_customerprofile.get("customername").invalid'>
+        {{inputModel.fullObj.defaultObj.getErrorMessage(inputModel.grupo1_customerprofile.get("customername"))}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill"  class="set2"  [ngStyle]="inputModel.xsection_customerprofile.s1.ch.customerlastname">
+        <mat-label>Lastname</mat-label>
+        <input matInput maxlength="40" placeholder="Placeholder" formControlName="customerlastname">
+        <!--<mat-icon matSuffix>sentiment_very_satisfied</mat-icon>-->
+        <!--<mat-hint>Customer Lastname</mat-hint>-->
+        <mat-error *ngIf='inputModel.grupo1_customerprofile.get("customerlastname").invalid'>
+          {{inputModel.fullObj.defaultObj.getErrorMessage(inputModel.grupo1_customerprofile.get("customerlastname"))}}</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field  class="set3"  appearance="fill" [ngStyle]="inputModel.xsection_customerprofile.s1.ch.dob">
+        <mat-label>DOB</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dob">
+        <mat-datepicker-toggle matSuffix [for]="picker">
+          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf='inputModel.grupo1_customerprofile.get("dob").invalid'>{{inputModel.fullObj.defaultObj.getErrorMessage(inputModel.grupo1_customerprofile.get("dob"))}}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill"  class="set2"  [ngStyle]="inputModel.xsection_customerprofile.s1.ch.email">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName='email' required>
+        <mat-error *ngIf='inputModel.grupo1_customerprofile.get("email").invalid'>
+          {{inputModel.fullObj.defaultObj.getErrorMessage(inputModel.grupo1_customerprofile.get("email"))}}
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill"  class="set2"  [ngStyle]="inputModel.xsection_customerprofile.s1.ch.phone1">
+        <mat-label>Phone 1</mat-label>
+        <input matInput placeholder="9(999) 999-9999" mask="0(000) 000-0000" formControlName='phone1'>
+        <!--<mat-icon matSuffix>sentiment_very_satisfied</mat-icon>-->
+        <!--<mat-hint>Customer Lastname</mat-hint>-->
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill"  class="set2"  [ngStyle]="inputModel.xsection_customerprofile.s1.ch.phone2">
+        <mat-label>Phone 2</mat-label>
+        <input matInput maxlength="18" placeholder="9(999) 999-9999" mask="0(000) 000-0000"
+        formControlName='phone2'>
+        <!--<mat-icon matSuffix>sentiment_very_satisfied</mat-icon>-->
+        <!--<mat-hint>Customer Lastname</mat-hint>-->
+      </mat-form-field>
+      <mat-form-field  class="set3"  appearance="fill" [ngStyle]="inputModel.xsection_customerprofile.s1.ch.refereddate">
+        <mat-label>Refered Date</mat-label>
+        <input matInput [matDatepicker]="picker2" formControlName="refereddate">
+        <mat-datepicker-toggle matSuffix [for]="picker2">
+          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+        <mat-error *ngIf='inputModel.grupo1_customerprofile.get("refereddate").invalid'>
+          {{inputModel.fullObj.defaultObj.getErrorMessage(inputModel.grupo1_customerprofile.get("refereddate"))}}
+        </mat-error>
+      </mat-form-field>
+
+</div>

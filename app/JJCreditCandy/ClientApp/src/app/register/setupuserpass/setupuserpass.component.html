@@ -1,0 +1,65 @@
+
+<div [formGroup]="inputModel.grupo1" autocomplete="off">
+    <input autocomplete="false" name="hidden" type="text" style="display:none;">
+<mat-card-header class="mat-elevation-z2" style="background-color:rgb(82, 80, 80);">
+    <div mat-card-avatar> <img [src]="inputModel.credentialsicon"
+            style="width:50px;height:50px;padding-top:10px;padding-left:7px;"></div>
+
+    <mat-card-title style="padding-left:10px;padding-top:10px;">Credentials</mat-card-title>
+    <mat-card-subtitle style="padding-left:10px;">Please setup your credentials</mat-card-subtitle>
+</mat-card-header>
+
+<br />
+
+
+    <mat-form-field appearance="fill" mat-form-field class="set3">
+        <mat-label>User Name</mat-label>
+        <input matInput placeholder="Username" formControlName="uname">
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill" mat-form-field class="set3">
+        <mat-label>Full Name</mat-label>
+        <input matInput placeholder="Full Name" formControlName="fullname">
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill" class="set2">
+        <mat-label>Enter your email</mat-label>
+        <input matInput type="email" placeholder="pat@example.com" formControlName="useremail" required>
+        <mat-error>
+            Invalid email.
+        </mat-error>
+    </mat-form-field>
+
+
+
+    <mat-form-field appearance="fill" class="set3">
+        <mat-label>Password</mat-label>
+        <input type="password" required matInput placeholder="Password" formControlName="pass">
+        <mat-error>
+            Field required
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="set3">
+        <mat-label>Password Confirm</mat-label>
+        <input required type="password" matInput placeholder="Password Confirm"
+            formControlName="passconfirm">
+        <mat-error>
+            Field required
+        </mat-error>
+
+        <label *ngIf='inputModel.grupo1.get("pass").value !== inputModel.grupo1.get("passconfirm").value &&  inputModel.grupo1.get("passconfirm").value !=="" '
+            style="color:red;font-size:12.5px;font-family: Roboto, 'Helvetica Neue', sans-serif;">
+            Password not match.
+        </label>
+
+    </mat-form-field>
+
+
+    <ng-content> </ng-content>
+
+
+
+</div>

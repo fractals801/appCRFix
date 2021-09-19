@@ -1,0 +1,7 @@
+<app-crudmenu *ngIf="!inputModel.xsection.s2.grid.disable"  #appcrudmenuprocesstran [(inputModel)]="inputModel.fullObj.xcrudMethodsProcesstran"> </app-crudmenu>
+<ag-grid-angular #xProcesstrangrid [stopEditingWhenGridLosesFocus]="false" style="width:100%; height: 60vh;" class="ag-theme-alpine"
+    [rowData]="gridStuffsProcesstran.rowData" [columnDefs]="gridStuffsProcesstran.columnDefs" [defaultColDef]="gridStuffsProcesstran.defaultColDef"
+    rowHeight="150"
+    [frameworkComponents]="frameworkComponents" [suppressDragLeaveHidesColumns]="true" (rowDoubleClicked)="gridStuffsProcesstran.rowDoubleClicked($event)"
+    (gridReady)="onGridStuffsProcesstranReady($event)" (cellValueChanged)="onCellValueChanged($event)">
+</ag-grid-angular>

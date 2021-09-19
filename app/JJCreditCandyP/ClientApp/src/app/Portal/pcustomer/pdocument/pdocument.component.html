@@ -1,0 +1,33 @@
+<div style="position:relative;height:187px;overflow: auto;">
+    <table mat-table [dataSource]="dataSource" style="width:100%;">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let row">
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+                    [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)">
+                </mat-checkbox>
+            </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="doctxt">
+            <th mat-header-cell *matHeaderCellDef style="font-weight: bold;">Issued/Received</th>
+            <td mat-cell *matCellDef="let element"> {{element.doctxt}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="col3">
+            <th mat-header-cell *matHeaderCellDef style="font-weight: bold;">&nbsp;</th>
+            <td mat-cell *matCellDef="let element"> {{element.col3}} </td>
+        </ng-container>
+       
+        <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row style="height:35px;" *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+</div>
+<br />
+<!-- <table  width="100%"><tr><td style="text-align: right;"><a class="linkfont" href="#1" onclick="return false;">Add</a></td><td></td></tr></table> -->

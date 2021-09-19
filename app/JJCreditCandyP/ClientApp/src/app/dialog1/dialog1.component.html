@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>
+  <mat-card-header class="mat-elevation-z2" style="background-color:rgb(82, 80, 80);">
+    <div mat-card-avatar> <img [src]="ImagePath" style="width:50px;height:50px;padding-top:0px;padding-left:7px;"></div>
+    <!-- <div mat-card-avatar><mat-icon style="font-size: 50px;" >person</mat-icon></div> -->
+    <mat-card-title style="padding-left:10px;padding-top:10px;width:90%;" >
+      <div style="white-space: nowrap;" [innerHTML]="data.title"></div>
+    </mat-card-title>
+    <!-- <mat-card-subtitle style="padding-left:10px;">&nbsp;
+    </mat-card-subtitle> -->
+  </mat-card-header>
+
+</h1>
+<div mat-dialog-content [innerHTML]="data.content">
+  
+  </div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close  mat-stroked-button color="primary">Close</button>
+</div>

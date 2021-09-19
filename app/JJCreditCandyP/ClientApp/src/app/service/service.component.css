@@ -1,0 +1,6 @@
+.class-hide-tab0 div.mat-tab-label:nth-child(1) {
+    display: none;
+}
+.class-hide-tab1 div.mat-tab-label:nth-child(2) {
+    display: none;
+}

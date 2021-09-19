@@ -1,0 +1,6 @@
+
+<ag-grid-angular [stopEditingWhenGridLosesFocus]="false" style="width:100%; height: 60vh;" class="ag-theme-alpine-dark"
+    [rowData]="inputModel.gridStuffsProcess.rowData" [columnDefs]="inputModel.gridStuffsProcess.columnDefs" [defaultColDef]="inputModel.gridStuffsProcess.defaultColDef"
+    [suppressDragLeaveHidesColumns]="true" (rowDoubleClicked)="inputModel.gridStuffsProcess.rowDoubleClicked($event)"
+    (gridReady)="inputModel.onGridStuffsProcessReady($event)">
+</ag-grid-angular>

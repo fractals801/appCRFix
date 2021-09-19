@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JJCreditCandy", "JJCreditCandy.csproj", "{0751534C-353B-43AA-8B8B-811C700900AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JJApi", "..\JJApi\JJApi.csproj", "{2A851DF9-C7B4-4ADA-94D1-4E3C4099EF7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wjsreport", "..\..\reports\Wjsreport\Wjsreport.csproj", "{51EAF72C-417E-4ABE-9326-0F0751381EDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0751534C-353B-43AA-8B8B-811C700900AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0751534C-353B-43AA-8B8B-811C700900AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0751534C-353B-43AA-8B8B-811C700900AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0751534C-353B-43AA-8B8B-811C700900AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A851DF9-C7B4-4ADA-94D1-4E3C4099EF7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A851DF9-C7B4-4ADA-94D1-4E3C4099EF7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A851DF9-C7B4-4ADA-94D1-4E3C4099EF7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A851DF9-C7B4-4ADA-94D1-4E3C4099EF7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51EAF72C-417E-4ABE-9326-0F0751381EDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51EAF72C-417E-4ABE-9326-0F0751381EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51EAF72C-417E-4ABE-9326-0F0751381EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51EAF72C-417E-4ABE-9326-0F0751381EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B735EBF1-9133-4B49-BA95-7FF234867036}
+	EndGlobalSection
+EndGlobal

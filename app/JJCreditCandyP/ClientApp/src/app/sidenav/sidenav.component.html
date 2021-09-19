@@ -1,0 +1,93 @@
+<mat-sidenav-container fullscreen>
+  <!-- This move the hamburger menu in the desired position -->
+  <mat-icon *ngIf="!vtoggle" style="cursor:pointer;" (click)="toggle()">menu</mat-icon>
+  <span *ngIf="!vtoggle" style="position:relative;top:-7px;" >&nbsp;User:&nbsp;{{xusername}}</span>
+  <mat-sidenav *ngIf="vtoggle" #sidenav mode="side" class="example-sidenav" [ngStyle]="{ 'width.em': sidenavWidth }" opened="true">
+
+    <!-- This move the hamburger menu in the desired position -->
+    <mat-icon *ngIf="vtoggle" (click)="toggle()" style="cursor:pointer;">menu</mat-icon>
+    <span *ngIf="vtoggle" style="position:relative;top:-7px;" >&nbsp;User:&nbsp;{{xusername}}</span>
+    <div style=" text-align: center;" class="logomain">
+      <img [src]="ImagePath"
+           style="width: 100px; height: 100px; vertical-align: middle;">
+    </div>
+    <hr style="background-color:white" />
+
+    <mat-nav-list>
+
+      <mat-list-item  routerLink="/ciaprofile" routerLinkActive="active"  >
+        <mat-icon mat-list-icon>business</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5 class="lead">Manage Company Profile</h5>
+        </div>
+      </mat-list-item>
+
+      <!-- <mat-list-item routerLink="7" routerLinkActive="active">
+        <mat-icon mat-list-icon>how_to_reg</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5 class="lead">Manage Customer Profile</h5>
+        </div>
+      </mat-list-item> -->
+
+      <mat-list-item *ngIf="xumasteruser=='1'" routerLink="/umanagement" routerLinkActive="active">
+        <mat-icon mat-list-icon>group</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5 class="lead">Manage Users</h5>
+        </div>
+      </mat-list-item>
+
+      <hr style="background-color:silver" />
+
+
+      <mat-list-item routerLink="/custprofile" routerLinkActive="active">
+        <mat-icon mat-list-icon>work</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5 class="lead">Sales Department</h5>
+        </div>
+      </mat-list-item>
+
+
+      <mat-list-item routerLink="/services" routerLinkActive="active">
+        <mat-icon mat-list-icon>room_service</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5 class="lead">Service Department</h5>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/processdepart" routerLinkActive="active">
+        <mat-icon mat-list-icon>engineering</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5 class="lead">Process Department</h5>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/about" routerLinkActive="active">
+        <mat-icon mat-list-icon>person</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5 class="lead">About</h5>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item (click)="logout()" routerLinkActive="active">
+        <mat-icon mat-list-icon>logout</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5 class="lead">Logout</h5>
+        </div>
+      </mat-list-item>
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <div class="example-sidenav-content">
+    <ng-content> </ng-content>
+  </div>
+</mat-sidenav-container>

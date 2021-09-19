@@ -1,0 +1,108 @@
+<mat-toolbar [ngStyle]="tm1.mattoolbar_paleblue">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="menubar-spacer"></span>
+
+    <button mat-button [matMenuTriggerFor]="aboveMenu">
+        <mat-icon>listalt</mat-icon>Account
+    </button>
+    <mat-menu #aboveMenu="matMenu" yPosition="above">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="belowMenu">
+        <mat-icon>ballot</mat-icon> New Features
+    </button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="beforeMenu">
+        <mat-icon>help</mat-icon> Help & Support
+    </button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+
+    <button mat-button [matMenuTriggerFor]="afterMenu">
+        <mat-icon>person</mat-icon>User
+    </button>
+    <mat-menu #afterMenu="matMenu" xPosition="after">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+
+</mat-toolbar>
+
+
+
+<mat-tab-group animationDuration="0" style="background-color: #eee;height: 88.8vh;">
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">home</mat-icon>
+            Home
+        </ng-template>
+        Content 1
+    </mat-tab>
+
+    <mat-tab >
+        <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">person</mat-icon>
+            Customers
+        </ng-template>
+        <br />
+        <ng-template matTabContent>
+            <app-pcustomer></app-pcustomer>
+        </ng-template>
+    </mat-tab>
+
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">schedule</mat-icon>
+            Schedule
+        </ng-template>
+        Content 3
+    </mat-tab>
+
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">business</mat-icon>
+            Company
+        </ng-template>
+        Content 4
+    </mat-tab>
+
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">receipt</mat-icon>
+            Invoices
+        </ng-template>
+        Content 5
+    </mat-tab>
+
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">assignmentind</mat-icon>
+            Afiliates
+        </ng-template>
+
+        Content 6
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">dashboard</mat-icon>
+            DashBoard
+        </ng-template>
+        Content 7
+    </mat-tab>
+
+
+
+</mat-tab-group>

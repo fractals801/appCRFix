@@ -1,0 +1,7 @@
+
+          <ag-grid-angular #aggridfollows rowHeight="150" id="aggridfollows" style="width:100%; height: 60vh;"
+            class="ag-theme-alpine-dark" enableCellChangeFlash=true [rowData]="gridStuffsFollows.rowData"
+            [columnDefs]="gridStuffsFollows.columnDefs" [frameworkComponents]="frameworkComponents"
+            [defaultColDef]="gridStuffsFollows.defaultColDef" [suppressDragLeaveHidesColumns]="true"
+            (gridReady)="onGridStuffsFollowsReady($event)"  (cellValueChanged)="onCellValueChanged($event)">
+          </ag-grid-angular>

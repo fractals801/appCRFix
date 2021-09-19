@@ -1,0 +1,87 @@
+<form [formGroup]="grupo1" #frm="ngForm" autocomplete="off" *ngIf="xsection_customerprofile.ready">
+    <div class="flex-container">
+        <div class="divbox">
+            <!-- <div class="flex-verticalcol" >
+                <div class="verticalprops" >Lead</div>
+                <div>
+                      <app-customerpersonalinfo [(inputModel)]="that"></app-customerpersonalinfo> 
+                 </div>
+            </div> -->
+            <mat-card [ngStyle]="tm1.matcard_static">
+                <mat-card [ngStyle]="tm1.matcard_yellowtext_backgroundbluepale">
+                    <div style="display:flex;justify-content:space-between;">
+                        <span style="padding-top:8px;">Lead</span> <img mat-card-avatar
+                            src="https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-13/32/Users-icon.png" style="width:30px;height:35px;">
+                    </div>
+                </mat-card>
+                <p>
+                    <app-customerpersonalinfo [(inputModel)]="that"></app-customerpersonalinfo>
+                </p>
+            </mat-card>
+        </div>
+
+        <div class="divbox">
+            <mat-card [ngStyle]="tm1.matcard_static">
+                <mat-card [ngStyle]="tm1.matcard_yellowtext_backgroundgreen">
+                
+                    <div style="display:flex;justify-content:space-between;">
+                        <span style="padding-top:8px;">Score</span>  
+                        <img mat-card-avatar [src]="'./../assets/imgs/score.svg'" style="width:30px;height:35px;">
+                    </div>
+                
+                </mat-card>
+                <p>
+                    <app-pscore ></app-pscore>
+                </p>
+            </mat-card>
+        </div>
+
+        <div class="divbox">
+            <mat-card [ngStyle]="tm1.matcard_static">
+                <mat-card [ngStyle]="tm1.matcard_yellowtext_backgroundorange">
+                    <span style="padding-top:9px;">Document</span>
+                </mat-card>
+                <p>
+                    <app-pdocument ></app-pdocument>
+                </p>
+            </mat-card>
+        </div>
+
+        <div class="divbox">
+            <mat-card [ngStyle]="tm1.matcard_static">
+                <mat-card [ngStyle]="tm1.matcard_yellowtext_backgroundredpale">
+                    <span style="padding-top:9px;">Dispute Status</span>
+                </mat-card>
+                <p>
+                    <app-pdispute ></app-pdispute>
+                </p>
+            </mat-card>
+        </div>
+
+        <div class="divbox">
+            <mat-card [ngStyle]="tm1.matcard_static">
+                <mat-card [ngStyle]="tm1.matcard_yellowtext_backgroundviolet">Task</mat-card>
+            </mat-card>
+        </div>
+
+        <div class="divbox">
+            <mat-card  [ngStyle]="tm1.matcard_static">
+                <mat-card [ngStyle]="tm1.matcard_yellowtext_backgroundyellowpale">Memo</mat-card>
+            </mat-card>
+        </div>
+
+
+        <div class="divbox" style="visibility: hidden;">
+            <mat-card [ngStyle]="tm1.matcard_static">
+                <mat-card [ngStyle]="tm1.matcard_yellowtext_backgroundbluepale">space holder</mat-card>
+            </mat-card>
+        </div>
+
+
+        <div class="divbox">
+            <mat-card [ngStyle]="tm1.matcard_static">
+                <mat-card [ngStyle]="tm1.matcard_yellowtext_backgroundbluepale">Invoices</mat-card>
+            </mat-card>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,9 @@
+<mat-form-field  >
+    <mat-label>Date</mat-label>
+    <input  [(ngModel)]="gvalue" #dpickergrid matInput [matDatepicker]="pickergrid" >
+    <mat-datepicker-toggle matSuffix [for]="pickergrid">
+      <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+    </mat-datepicker-toggle>
+    <mat-datepicker #pickergrid></mat-datepicker>
+    <mat-error></mat-error>
+  </mat-form-field>

@@ -1,0 +1,46 @@
+<app-sidenav #xsnav [(inputModel)]="that">
+
+  <form [formGroup]="grupo1" #frm="ngForm" autocomplete="off">
+    <input autocomplete="false" name="hidden" type="text" style="display:none;">
+    <mat-tab-group dynamicHeight>
+      <mat-tab label="User Management" *ngIf="fullObj.defaultObj.showtab2==false">
+
+        <app-crudmenu #appcrudmenu1 [(inputModel)]="fullObj.xcrudMethods1"></app-crudmenu>
+        <div class="example-container mat-elevation-z4 ">
+          <p>
+            <app-usergrid #xUsergrid [(inputModel)]="that">
+            </app-usergrid>
+          </p>
+        </div>
+      </mat-tab>
+
+
+      <mat-tab label="User Information" *ngIf="fullObj.defaultObj.showtab2">
+        <app-crudmenu #appcrudmenu2 [(inputModel)]="fullObj.xcrudMethods2"></app-crudmenu>
+        <app-setupuserpass [(inputModel)]="that">
+          <mat-form-field appearance="fill" class="set2" >
+            <mat-label>Security Profile</mat-label>
+            <mat-select formControlName='iddefaulttemplate'>
+              <mat-option *ngFor="let profile of profiles" [value]="profile.id">
+                {{profile.templatename}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </app-setupuserpass>
+
+      </mat-tab>
+
+
+      <mat-tab label="Profile Management" *ngIf="fullObj.defaultObj.showtab2==false">
+        
+      </mat-tab>
+
+
+
+
+
+    </mat-tab-group>
+    <input type="hidden"  formControlName='idrelatedwithcompany'>
+  </form>
+
+</app-sidenav>

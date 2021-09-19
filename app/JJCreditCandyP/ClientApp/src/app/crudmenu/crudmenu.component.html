@@ -1,0 +1,56 @@
+
+<mat-card class="custom_card" style="display: flex; flex-direction: row;">
+  <div  *ngIf="aOptions.includes('add') || aOptions.length==0" class="richfix">
+    <button class="neonblue"  (click)="inputModel.add()"  mat-icon-button >
+      <mat-icon  >add_circle</mat-icon>&nbsp;
+      <span >Add New</span>
+    </button>
+    
+  </div>
+  <div   *ngIf="aOptions.includes('save') || aOptions.length==0" class="richfix">
+    <button  class="neongreen" mat-icon-button (click)="inputModel.save()">
+      <mat-icon >save</mat-icon>&nbsp;
+      <span >Save</span>
+    </button>
+    
+  </div>
+
+  <div  *ngIf="aOptions.includes('update') || aOptions.length==0" class="richfix">
+    <button class="neongreen"  (click)="inputModel.update()" mat-icon-button (click)="inputModel.update()">
+      <mat-icon>update</mat-icon>
+    &nbsp;<span>Update</span>
+    </button>
+    
+  </div>
+
+
+  <div   *ngIf="aOptions.includes('cancel') || aOptions.length==0" class="richfix">
+    <button class="neonred"  mat-icon-button (click)="inputModel.cancel()">
+      <mat-icon >cancel</mat-icon>
+      &nbsp;<span >Cancel</span>
+    </button>
+    
+  </div>
+
+  <div   *ngIf="aOptions.includes('delete') || aOptions.length==0" class="richfix">
+    <button class="neonred"  mat-icon-button (click)="inputModel.delete()">
+      <mat-icon >remove_circle</mat-icon>
+      &nbsp; <span>Delete</span>
+    </button>
+   
+  </div>
+
+  <div  *ngIf="aOptions.includes('search') || aOptions.length==0" class="richfix">
+    <button mat-icon-button class="neoncarterpillar" (click)="inputModel.search()" >
+      <mat-icon >search</mat-icon>
+      &nbsp;<span>Search</span>
+    </button>
+    
+  </div>
+
+
+
+  <!--<button mat-raised-button color="accent"><mat-icon>mic</mat-icon> Start Recording</button>-->
+  <!--<input [(ngModel)]="inputModel" (ngModelChange)="inputModelChange.emit(inputModel)">-->
+</mat-card>
+

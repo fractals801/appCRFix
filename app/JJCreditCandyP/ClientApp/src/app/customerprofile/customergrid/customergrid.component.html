@@ -1,0 +1,5 @@
+<ag-grid-angular [stopEditingWhenGridLosesFocus]="false" #aggrid1 id="aggrid1" style="width:100%; height: 60vh;"
+   [rowData]="gridStuffs.rowData" [columnDefs]="gridStuffs.columnDefs" class="ag-theme-alpine"
+  [defaultColDef]="gridStuffs.defaultColDef" [suppressDragLeaveHidesColumns]="true"
+  (rowDoubleClicked)="gridStuffs.rowDoubleClicked($event)" (gridReady)="gridStuffs.onGridReady($event)">
+</ag-grid-angular>
