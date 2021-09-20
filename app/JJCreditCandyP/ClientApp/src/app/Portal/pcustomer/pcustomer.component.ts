@@ -12,7 +12,7 @@ import { Theme1 } from 'src/app/GlobalVars/staticInfo/MaterialDynamicCss';
   styleUrls: ['./pcustomer.component.css']
 })
 export class PcustomerComponent implements OnInit, AfterViewInit {
-
+// rich quitame 3
   public that: any = this;
   public grupo1_customerprofile: FormGroup;
   public grupo1: FormGroup;
